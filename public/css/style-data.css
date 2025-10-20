@@ -1,0 +1,7 @@
+#sidebar h1 {
+  font-size: 24px;
+}
+
+.button--primary {
+  background: hsl(215.9, 100%, 48.2%);
+}

@@ -66,7 +66,7 @@ const defaultConfig: GathioConfig = {
         email: "contact@example.com",
         port: "3000",
         site_name: "gathio",
-        site_title: "gathio",
+        site_title: "<a href='/'>gathio</a>",
         is_federated: true,
         delete_after_days: 7,
         email_logo_url: "",

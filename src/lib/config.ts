@@ -17,6 +17,7 @@ export interface GathioConfig {
         port: string;
         email: string;
         site_name: string;
+        site_title: string;
         delete_after_days: number;
         is_federated: boolean;
         email_logo_url: string;
@@ -49,6 +50,7 @@ export interface GathioConfig {
 interface FrontendConfig {
     domain: string;
     siteName: string;
+    siteTitle: string;
     isFederated: boolean;
     emailLogoUrl: string;
     showKofi: boolean;
@@ -64,6 +66,7 @@ const defaultConfig: GathioConfig = {
         email: "contact@example.com",
         port: "3000",
         site_name: "gathio",
+        site_title: "gathio",
         is_federated: true,
         delete_after_days: 7,
         email_logo_url: "",
@@ -83,6 +86,7 @@ export const frontendConfig = (res: Response): FrontendConfig => {
         return {
             domain: defaultConfig.general.domain,
             siteName: defaultConfig.general.site_name,
+            siteTitle: defaultConfig.general.site_title,
             isFederated: defaultConfig.general.is_federated,
             emailLogoUrl: defaultConfig.general.email_logo_url,
             showPublicEventList: defaultConfig.general.show_public_event_list,
@@ -95,6 +99,7 @@ export const frontendConfig = (res: Response): FrontendConfig => {
     return {
         domain: config.general.domain,
         siteName: config.general.site_name,
+        siteTitle: config.general.site_title,
         isFederated: !!config.general.is_federated,
         emailLogoUrl: config.general.email_logo_url,
         showPublicEventList: !!config.general.show_public_event_list,

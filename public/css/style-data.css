@@ -5,3 +5,16 @@
 .button--primary {
   background: hsl(215.9, 100%, 48.2%);
 }
+
+#eventImageContainer {
+  margin-bottom: 30px;
+}
+#eventImageContainer::before {
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-sticky-wrapper {
+    margin: 40px 20%;
+  }
+}
